@@ -1,18 +1,16 @@
 <div [formGroup]="form">
   <div *ngIf="item.type == 'select'">
-    <div>{{item.text}}</div>
-    <select [formControlName]="item.name" id="">
-      <option *ngFor="let dataItem of item.data" [value]="dataItem">{{dataItem}}</option>
-    </select>
-    <div *ngIf="controlName?.invalid" style="color: red">
-      error
-    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>{{item.text}}</mat-label>
+      <mat-select [formControlName]="item.name">
+        <mat-option *ngFor="let dataItem of item.data" [value]="dataItem">{{dataItem}}</mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
   <div *ngIf="item.type == 'input'">
-    <div>{{item.text}}</div>
-    <input [type]="item.dataType" [formControlName]="item.name">
-    <div *ngIf="controlName?.invalid" style="color: red">
-      error
-    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>{{item.text}}</mat-label>
+      <input matInput [type]="item.dataType" [formControlName]="item.name">
+    </mat-form-field>
   </div>
 </div>

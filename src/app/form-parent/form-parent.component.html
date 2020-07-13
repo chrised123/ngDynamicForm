@@ -3,9 +3,5 @@
     <app-form-element [item]="item" [form]="formGroup"></app-form-element>
   </div>
   <br>
-  <br>
-
-  <div>This form is : {{formGroup.valid ? 'valid' : 'not valid'}}</div>
-  <br>
-  <button [disabled]="!formGroup.valid">Save</button>
+  <button [disabled]="!formGroup.valid" (click)="submit(formGroup)" mat-raised-button color="primary">Save</button>
 </form>

@@ -22,4 +22,8 @@ export class FormParentComponent implements OnInit {
     console.log(this.formGroup);
   }
 
+  submit = (form: FormGroup) => {
+    console.log(form);
+  }
+
 }
