@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "nested-form": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "nested-form"
+    }
+  },
+  "defaultProject": "nested-form",
+  "cli": {
+    "analytics": "8ea956c2-87d8-4a60-8584-ccd743e28268"
+  }
 }

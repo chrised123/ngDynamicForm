@@ -1,0 +1,11 @@
+<form [formGroup]="formGroup">
+  <div *ngFor="let item of config">
+    <app-form-element [item]="item" [form]="formGroup"></app-form-element>
+  </div>
+  <br>
+  <br>
+
+  <div>This form is : {{formGroup.valid ? 'valid' : 'not valid'}}</div>
+  <br>
+  <button [disabled]="!formGroup.valid">Save</button>
+</form>
